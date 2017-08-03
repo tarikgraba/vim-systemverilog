@@ -11,3 +11,6 @@ The `ftplugin` script contains configuration for:
 - [tagbar](https://github.com/majutsushi/tagbar)
      * using [universal-ctags](https://github.com/universal-ctags/ctags)
 - [and match-it](http://www.vim.org/scripts/script.php?script_id=39)
+
+**Important**
+Check each file for the authors/credits/licences.
