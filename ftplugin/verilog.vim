@@ -20,7 +20,8 @@ au FileType systemverilog let g:ale_verilog_verilator_options = '-sv --default-l
 au FileType verilog let g:ale_linters = { 'verilog' :  ['verilator'], }
 au FileType verilog let g:ale_verilog_verilator_options = '--default-language "1364-2005"'
 
-" Ajouter des definitions pour SystemVerilog pour tagbar
+" SystemVerilog for keywords tagbar
+" Tested with Universal Ctags (https://ctags.io/)
 let g:tagbar_type_systemverilog = {
     \ 'ctagstype': 'systemverilog',
     \ 'kinds' : [

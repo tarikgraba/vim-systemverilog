@@ -1,6 +1,6 @@
 # Vim scripts for SystemVerilog
 
-This is the agregation of different Verilog/SystemVerilog scripts found on `vim.org` and `github.com`.
+This is the aggregate of different Verilog/SystemVerilog scripts found on `vim.org` and `github.com`.
 
 The files are organized into `syntax`/`ftpdetect`/... directories so you can easily install them using a plugin manager (like [Vundle](https://github.com/VundleVim/Vundle.vim) or [Plug](https://github.com/junegunn/vim-plug)).
 
