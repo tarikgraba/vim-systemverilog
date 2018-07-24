@@ -10,6 +10,9 @@ if exists("b:did_ftplugin")
   finish
 endif
 
+" Define include string
+setlocal include=^\\s*`include
+
 " Configure syntastic which only recognizes verilog filetype
 let g:syntastic_filetype_map = {"systemverilog":"verilog"}
 au FileType systemverilog let g:syntastic_verilog_compiler_options = '-Wall --default-language "1800-2012"'
@@ -102,6 +105,7 @@ if exists("loaded_matchit")
   \ '\<if\>:\<else\>,' .
   \ '\<module\>:\<endmodule\>,' .
   \ '\<class\>:\<endclass\>,' .
+  \ '\<checker\>:\<endchecker\>,' .
   \ '\<program\>:\<endprogram\>,' .
   \ '\<clocking\>:\<endclocking\>,' .
   \ '\<property\>:\<endproperty\>,' .
@@ -109,6 +113,7 @@ if exists("loaded_matchit")
   \ '\<package\>:\<endpackage\>,' .
   \ '\<covergroup\>:\<endgroup\>,' .
   \ '\<primitive\>:\<endprimitive\>,' .
+  \ '\<config\>:\<endconfig\>,' .
   \ '\<specify\>:\<endspecify\>,' .
   \ '\<generate\>:\<endgenerate\>,' .
   \ '\<interface\>:\<endinterface\>,' .
@@ -116,7 +121,7 @@ if exists("loaded_matchit")
   \ '\<task\>:\<endtask\>,' .
   \ '\<case\>\|\<casex\>\|\<casez\>:\<endcase\>,' .
   \ '\<fork\>:\<join\>\|\<join_any\>\|\<join_none\>,' .
-  \ '`ifdef\>:`else\>:`endif\>,' .
+  \ '`if\(n\)\?def\>:`elsif\>:`else\>:`endif\>,' .
   \ '\<generate\>:\<endgenerate\>,'
 endif
 
