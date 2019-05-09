@@ -18,10 +18,10 @@ let g:syntastic_filetype_map = {"systemverilog":"verilog"}
 au FileType systemverilog let g:syntastic_verilog_compiler_options = '-Wall --default-language "1800-2012"'
 
 " ALE conf
-au FileType systemverilog let g:ale_linters = { 'systemverilog' :  ['verilator'], }
-au FileType systemverilog let g:ale_verilog_verilator_options = '-sv --default-language "1800-2012"'
-au FileType verilog let g:ale_linters = { 'verilog' :  ['verilator'], }
-au FileType verilog let g:ale_verilog_verilator_options = '--default-language "1364-2005"'
+au FileType systemverilog let b:ale_linters = { 'systemverilog' :  ['verilator'], }
+au FileType systemverilog let b:ale_verilog_verilator_options = '-sv --default-language "1800-2012"'
+au FileType verilog let b:ale_linters = { 'verilog' :  ['verilator'], }
+au FileType verilog let b:ale_verilog_verilator_options = '--default-language "1364-2005"'
 
 " SystemVerilog for keywords tagbar
 " Tested with Universal Ctags (https://ctags.io/)
