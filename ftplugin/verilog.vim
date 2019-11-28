@@ -60,6 +60,7 @@ let g:tagbar_type_systemverilog = {
         \ 'M' : 'modport',
         \ 'f' : 'function',
         \ 't' : 'task',
+        \ 'V' : 'covergroup',
      \},
      \ 'scope2kind' : {
         \ 'package'   : 'K',
@@ -122,7 +123,8 @@ if exists("loaded_matchit")
   \ '\<case\>\|\<casex\>\|\<casez\>:\<endcase\>,' .
   \ '\<fork\>:\<join\>\|\<join_any\>\|\<join_none\>,' .
   \ '`if\(n\)\?def\>:`elsif\>:`else\>:`endif\>,' .
-  \ '\<generate\>:\<endgenerate\>,'
+  \ '\<generate\>:\<endgenerate\>,' .
+  \ '\<covergroup\>:\<endgroup\>,'
 endif
 
 " Reset 'cpoptions' back to the user's setting

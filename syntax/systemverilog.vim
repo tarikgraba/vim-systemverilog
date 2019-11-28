@@ -65,6 +65,8 @@ syn keyword SverilogStatement   throughout timeprecision timeunit
 syn keyword SverilogStatement   unique0 unique var virtual
 syn keyword SverilogStatement   void wait_order with within
 syn keyword SverilogStatement   xnor xor
+syn keyword SverilogStatement   covergroup coverpoint endgroup
+syn keyword SverilogStatement   bins ignore_bins illegal_bins
 syn keyword SverilogLabel       begin end fork join join_any  join_none
 syn keyword SverilogConditional iff if else case casex casez default endcase
 syn keyword SverilogRepeat      forever repeat while for foreach
