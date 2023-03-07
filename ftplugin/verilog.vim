@@ -83,6 +83,36 @@ let g:tagbar_type_systemverilog = {
      \ },
      \}
 
+" Verilog keywords for tagbar
+" Tested with Universal Ctags (https://ctags.io/)
+let g:tagbar_type_verilog = {
+    \ 'ctagstype': 'verilog',
+    \ 'kinds' : [
+         \'b:blocks',
+         \'c:constants',
+         \'d:text macros',
+         \'e:events',
+         \'f:functions',
+         \'i:instances',
+         \'m:modules',
+         \'n:net data types',
+         \'p:ports',
+         \'r:variable data types',
+         \'t:tasks',
+     \],
+     \ 'sro': '.',
+     \ 'kind2scope' : {
+        \ 'm' : 'module',
+        \ 'f' : 'function',
+        \ 't' : 'task',
+     \},
+     \ 'scope2kind' : {
+        \ 'module'    : 'm',
+        \ 'function'  : 'f',
+        \ 'task'      : 't',
+     \ },
+     \}
+
 " Don't load another plugin for this buffer
 let b:did_ftplugin = 1
 
