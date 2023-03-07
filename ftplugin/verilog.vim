@@ -23,7 +23,7 @@ au FileType systemverilog let b:ale_verilog_verilator_options = '-sv --default-l
 au FileType verilog let b:ale_linters = { 'verilog' :  ['verilator'], }
 au FileType verilog let b:ale_verilog_verilator_options = '--default-language "1364-2005"'
 
-" SystemVerilog for keywords tagbar
+" SystemVerilog keywords for tagbar
 " Tested with Universal Ctags (https://ctags.io/)
 let g:tagbar_type_systemverilog = {
     \ 'ctagstype': 'systemverilog',
@@ -46,6 +46,7 @@ let g:tagbar_type_systemverilog = {
          \'V:covergroups',
          \'b:blocks',
          \'c:constants',
+         \'d:text macros',
          \'e:events',
          \'f:functions',
          \'i:instances',
@@ -54,7 +55,7 @@ let g:tagbar_type_systemverilog = {
          \'n:net data types',
          \'p:ports',
          \'q:sequences',
-         \'r:register data types',
+         \'r:variable data types',
          \'t:tasks',
          \'w:structs and unions members',
      \],
