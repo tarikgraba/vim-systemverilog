@@ -1,22 +1,17 @@
 " Vim syntax file
 " Language:	System_Verilog
 " Maintainer:	T.G.
-" Last Update:  Thu Apr  2 14:28:24 CEST 2009
+" Last Update:  Thu Apr 19 10:38:43 CET 2024
 
-" For version 5.x: Clear all syntax items
-" For version 6.x: Quit when a syntax file was already loaded
-if version < 600
-   syntax clear
-elseif exists("b:current_syntax")
+" quit when a syntax file was already loaded
+if exists("b:current_syntax")
    finish
 endif
 
-" Set the local value of the 'iskeyword' option
-if version >= 600
-   setlocal iskeyword=@,48-57,_,192-255
-else
-   set iskeyword=@,48-57,_,192-255
-endif
+" Set the local value of the 'iskeyword' option.
+" NOTE: '?' was added so that verilogNumber would be processed correctly when
+"       '?' is the last character of the number.
+setlocal iskeyword=@,48-57,63,_,192-255
 
 " A bunch of useful SVerilog keywords
 
@@ -154,42 +149,32 @@ syn keyword SverilogMethod      new
 syn sync minlines=50
 
 " Define the default highlighting.
-" For version 5.7 and earlier: only when not done already
-" For version 5.8 and later: only when an item doesn't have highlighting yet
-if version >= 508 || !exists("did_Sverilog_syn_inits")
-   if version < 508
-      let did_Sverilog_syn_inits = 1
-      command -nargs=+ HiLink hi link <args>
-   else
-      command -nargs=+ HiLink hi def link <args>
-   endif
+" Only when an item doesn't have highlighting yet
 
-   " The default highlighting.
-   HiLink SverilogCharacter         Character
-   HiLink SverilogConditional       Conditional
-   HiLink SverilogRepeat            Repeat
-   HiLink SverilogString            String
-   HiLink SverilogTodo              Todo
-   HiLink SverilogDirective         SpecialComment
-   HiLink SverilogComment           Comment
-   HiLink SverilogConstant          Constant
-   HiLink SverilogLabel             Label
-   HiLink SverilogNumber            Number
-   HiLink SverilogOperator          Special
-   HiLink SverilogStatement         Statement
-   HiLink SverilogGlobal            Define
-   HiLink SverilogEscape            Special
-   HiLink SverilogType              Type
-   HiLink SverilogObject            Type
-   HiLink SverilogTypeDef           TypeDef
-   HiLink SverilogFunction          Function
-   HiLink SverilogMethod            Function
-   HiLink SverilogGenerate          SpecialComment
-   HiLink SverilogTime              Special
-   HiLink SverilogMacro             none
+" The default highlighting.
+hi def link SverilogCharacter         Character
+hi def link SverilogConditional       Conditional
+hi def link SverilogRepeat            Repeat
+hi def link SverilogString            String
+hi def link SverilogTodo              Todo
+hi def link SverilogDirective         SpecialComment
+hi def link SverilogComment           Comment
+hi def link SverilogConstant          Constant
+hi def link SverilogLabel             Label
+hi def link SverilogNumber            Number
+hi def link SverilogOperator          Special
+hi def link SverilogStatement         Statement
+hi def link SverilogGlobal            Define
+hi def link SverilogEscape            Special
+hi def link SverilogType              Type
+hi def link SverilogObject            Type
+hi def link SverilogTypeDef           TypeDef
+hi def link SverilogFunction          Function
+hi def link SverilogMethod            Function
+hi def link SverilogGenerate          SpecialComment
+hi def link SverilogTime              Special
+hi def link SverilogMacro             none
 
-   delcommand HiLink
-endif
 
 let b:current_syntax = "systemverilog"
 
